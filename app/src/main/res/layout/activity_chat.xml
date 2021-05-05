@@ -63,6 +63,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_chats"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="8dp"
@@ -70,7 +71,8 @@
         app:layout_constraintBottom_toTopOf="@id/edit_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        tools:listitem="@layout/chat_list_item" />
 
     <EditText
         android:id="@+id/edit_message"
@@ -91,10 +93,10 @@
         android:id="@+id/image_send"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_margin="8dp"
         android:background="?selectableItemBackgroundBorderless"
         android:importantForAccessibility="no"
-        android:padding="8dp"
+        android:padding="4dp"
         android:src="@drawable/ic_send"
         app:layout_constraintBottom_toBottomOf="@id/edit_message"
         app:layout_constraintEnd_toEndOf="parent"
